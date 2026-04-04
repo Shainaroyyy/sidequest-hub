@@ -13,7 +13,7 @@ interface WorldCard {
 const worlds: WorldCard[] = [
   { id: "fitness", name: "Fitness World", emoji: "🏋️", description: "Move your body, level up your health.", active: true, path: "/worlds/fitness" },
   { id: "study", name: "Study World", emoji: "📚", description: "Learn something new every day.", active: true, path: "/worlds/study" },
-  { id: "social", name: "Social World", emoji: "🤝", description: "Build connections, grow your network.", active: false },
+  { id: "social", name: "Social World", emoji: "🤝", description: "Build connections, grow your network.", active: true, path: "/worlds/social" },
   { id: "creative", name: "Creative World", emoji: "🎨", description: "Express yourself through creation.", active: false },
 ];
 
