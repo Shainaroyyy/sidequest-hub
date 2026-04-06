@@ -14,7 +14,7 @@ const worlds: WorldCard[] = [
   { id: "fitness", name: "Fitness World", emoji: "🏋️", description: "Move your body, level up your health.", active: true, path: "/worlds/fitness" },
   { id: "study", name: "Study World", emoji: "📚", description: "Learn something new every day.", active: true, path: "/worlds/study" },
   { id: "social", name: "Social World", emoji: "🤝", description: "Build connections, grow your network.", active: true, path: "/worlds/social" },
-  { id: "creative", name: "Creative World", emoji: "🎨", description: "Express yourself through creation.", active: false },
+  { id: "creative", name: "Creative World", emoji: "🎨", description: "Express yourself through creation.", active: true, path: "/worlds/creative" },
 ];
 
 const getProgress = (worldId: string): { done: number; total: number } => {
@@ -100,7 +100,7 @@ const Worlds = () => {
                   </span>
                 )}
 
-                {world.active && progress && progress.total > 0 && (
+                {world.active && progress && progress && (
                   <div className="mt-auto pt-2">
                     <div className="flex justify-between text-xs text-muted-foreground mb-1">
                       <span>progress</span>
