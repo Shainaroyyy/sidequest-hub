@@ -42,22 +42,22 @@ const Worlds = () => {
   };
 
   return (
-    <div className="min-h-screen grid-bg">
+    <div className="fixed inset-0 flex flex-col grid-bg">
       {/* Header */}
-      <header className="border-b border-border px-6 py-4 flex items-center justify-between">
+      <header className="border-b border-border px-6 py-4 flex items-center justify-between bg-background z-10 sticky top-0">
         <button onClick={() => navigate("/")} className="font-heading font-bold text-foreground text-lg bg-transparent border-none cursor-pointer hover:text-primary transition-colors">
           SQ
         </button>
         <span className="text-muted-foreground text-xs font-mono">worlds://index</span>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 py-12">
-        <div className="space-y-2 mb-10 animate-fade-up">
+      <main className="flex-1 overflow-auto w-full">
+        <div className="max-w-4xl mx-auto px-6 py-12 space-y-2 mb-10 animate-fade-up">
           <h1 className="text-3xl font-heading font-bold text-foreground">Select a World</h1>
           <p className="text-muted-foreground text-sm font-mono">Choose your quest line. More worlds coming soon.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="max-w-4xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {worlds.map((world, i) => {
             const progress = world.active ? getProgress(world.id) : null;
             const isHovered = hoveredId === world.id;
