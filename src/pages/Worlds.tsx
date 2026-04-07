@@ -52,12 +52,12 @@ const Worlds = () => {
       </header>
 
       <main className="flex-1 overflow-auto w-full">
-        <div className="max-w-4xl mx-auto px-6 py-12 space-y-2 mb-10 animate-fade-up">
+        <div className="max-w-4xl mx-auto px-6 pt-12 space-y-2 mb-10 animate-fade-up">
           <h1 className="text-3xl font-heading font-bold text-foreground">Select a World</h1>
           <p className="text-muted-foreground text-sm font-mono">Choose your quest line. More worlds coming soon.</p>
         </div>
 
-        <div className="max-w-4xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="max-w-4xl mx-auto px-6 pb-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {worlds.map((world, i) => {
             const progress = world.active ? getProgress(world.id) : null;
             const isHovered = hoveredId === world.id;
