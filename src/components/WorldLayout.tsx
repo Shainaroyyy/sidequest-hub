@@ -10,8 +10,8 @@ const WorldLayout = ({ worldName, children }: WorldLayoutProps) => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen grid-bg">
-      <header className="border-b border-border px-6 py-4 flex items-center gap-6">
+    <div className="fixed inset-0 flex flex-col grid-bg">
+      <header className="border-b border-border px-6 py-4 flex items-center gap-6 bg-background z-10 sticky top-0">
         <button
           onClick={() => navigate("/worlds")}
           className="text-muted-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer text-sm font-mono"
@@ -24,8 +24,10 @@ const WorldLayout = ({ worldName, children }: WorldLayoutProps) => {
           module::loaded
         </span>
       </header>
-      <main className="max-w-2xl mx-auto px-6 py-10">
-        {children}
+      <main className="flex-1 overflow-auto w-full">
+        <div className="max-w-2xl mx-auto px-6 py-10">
+          {children}
+        </div>
       </main>
     </div>
   );
