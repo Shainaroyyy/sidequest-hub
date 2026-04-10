@@ -21,6 +21,7 @@ const worlds: WorldCard[] = [
   { id: "outdoor", name: "Outdoor World", emoji: "🌳", description: "Step outside, breathe fresh air, and reconnect with nature.", active: true, path: "/worlds/outdoor" },
   { id: "health", name: "Health & Nutrition World", emoji: "🥗", description: "Build small daily habits for a healthier diet.", active: true, path: "/worlds/health" },
   { id: "fun", name: "Fun & Play World", emoji: "🎉", description: "Relax, enjoy, and have fun while staying active.", active: true, path: "/worlds/fun" },
+  { id: "audio", name: "Audio & Learning World", emoji: "🎧", description: "Turn passive listening into active learning.", active: true, path: "/worlds/audio" },
 ];
 
 const triggerConfetti = () => {
