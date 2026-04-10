@@ -150,7 +150,7 @@ const QuestList = ({ worldId, worldEmoji, quests }: QuestListProps) => {
               <div
                 key={quest.id}
                 onClick={() => toggle(quest.id)}
-                className={`quest-item group relative p-4 flex items-start gap-4 min-h-24 cursor-pointer select-none animate-fade-up border border-border bg-card transition-all duration-200
+                className={`quest-item group relative p-4 flex items-center gap-4 cursor-pointer select-none animate-fade-up border border-border bg-card transition-all duration-200
                   ${isAnimating ? "quest-pop" : ""}
                   ${isFlashing ? "quest-flash" : ""}
                   ${done ? "opacity-80" : ""}
@@ -183,7 +183,7 @@ const QuestList = ({ worldId, worldEmoji, quests }: QuestListProps) => {
 
                 {/* Title */}
                 <span
-                  className={`flex-1 min-h-[3.75rem] max-h-[3.75rem] overflow-hidden [display:-webkit-box] [-webkit-line-clamp:3] [-webkit-box-orient:vertical] leading-5 text-sm font-mono transition-all duration-200 ${
+                  className={`text-sm font-mono transition-all duration-200 ${
                     done ? "text-muted-foreground line-through" : "text-foreground"
                   }`}
                 >
@@ -192,7 +192,7 @@ const QuestList = ({ worldId, worldEmoji, quests }: QuestListProps) => {
 
                 {/* Status */}
                 <span
-                  className={`ml-auto self-start text-[10px] font-mono uppercase tracking-wider transition-colors duration-200 ${
+                  className={`ml-auto text-[10px] font-mono uppercase tracking-wider transition-colors duration-200 ${
                     done ? "text-accent" : "text-muted-foreground opacity-0 group-hover:opacity-100"
                   }`}
                 >
