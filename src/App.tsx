@@ -11,6 +11,9 @@ import CreativeWorld from "./pages/CreativeWorld";
 import FinanceWorld from "./pages/FinanceWorld";
 import QuickStart from "./pages/QuickStart";
 import RandomQuest from "./pages/RandomQuest";
+import OutdoorWorld from "./pages/OutdoorWorld";
+import HealthWorld from "./pages/HealthWorld";
+import FunWorld from "./pages/FunWorld";
 
 
 const queryClient = new QueryClient();
