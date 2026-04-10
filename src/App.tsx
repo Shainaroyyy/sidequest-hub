@@ -8,11 +8,10 @@ import StudyWorld from "./pages/StudyWorld";
 import NotFound from "./pages/NotFound";
 import SocialWorld from "./pages/SocialWorld";
 import CreativeWorld from "./pages/CreativeWorld";
+import FinanceWorld from "./pages/FinanceWorld";
 import QuickStart from "./pages/QuickStart";
 import RandomQuest from "./pages/RandomQuest";
-import DetoxWorld from "./pages/DetoxWorld";
-import CommunicationWorld from "./pages/CommunicationWorld";
-import HomeWorld from "./pages/HomeWorld";
+
 
 const queryClient = new QueryClient();
 
@@ -27,11 +26,11 @@ const App = () => (
         <Route path="/worlds/study" element={<StudyWorld />} />
         <Route path="/worlds/social" element={<SocialWorld />} />
         <Route path="/worlds/creative" element={<CreativeWorld />} />
-        <Route path="/worlds/detox" element={<DetoxWorld />} />
-        <Route path="/worlds/communication" element={<CommunicationWorld />} />
-        <Route path="/worlds/home" element={<HomeWorld />} />
-        <Route path="/random" element={<RandomQuest />} />
+
         <Route path="*" element={<NotFound />} />
+        <Route path="/worlds/outdoor" element={<OutdoorWorld />} />
+        <Route path="/worlds/health" element={<HealthWorld/>} />
+        <Route path="/worlds/fun" element={<FunWorld />} />
       </Routes>
     </BrowserRouter>
   </QueryClientProvider>

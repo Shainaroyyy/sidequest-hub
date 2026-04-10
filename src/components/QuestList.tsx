@@ -36,9 +36,7 @@ const QuestList = ({ worldId, worldEmoji, quests }: QuestListProps) => {
   const [animating, setAnimating] = useState<string | null>(null);
   const [flashId, setFlashId]     = useState<string | null>(null);
   const [progressGlow, setProgressGlow] = useState(false);
-  const [collapsed, setCollapsed] = useState<Record<Difficulty, boolean>>({
-    Easy: false, Medium: false, Hard: false,
-  });
+
 
   useEffect(() => {
     localStorage.setItem(storageKey, JSON.stringify(state));
@@ -68,17 +66,7 @@ const QuestList = ({ worldId, worldEmoji, quests }: QuestListProps) => {
   };
 
   const completed = Object.values(state).filter(Boolean).length;
-  const total     = quests.length;
-  const pct       = total > 0 ? (completed / total) * 100 : 0;
 
-  // Group quests by difficulty
-  const grouped = DIFFICULTY_ORDER.reduce<Record<Difficulty, Quest[]>>(
-    (acc, diff) => {
-      acc[diff] = quests.filter((q) => q.difficulty === diff);
-      return acc;
-    },
-    { Easy: [], Medium: [], Hard: [] }
-  );
 
   return (
     <div className="space-y-6">
@@ -169,19 +157,13 @@ const QuestList = ({ worldId, worldEmoji, quests }: QuestListProps) => {
         </div>
       </div>
 
-      {/* Grouped quest sections */}
-      {quests.length === 0 ? (
+
         <div className="panel p-8 text-center animate-fade-up">
-          <p className="text-muted-foreground text-sm font-mono">No quests available.</p>
+          <p className="text-muted-foreground text-sm font-mono">
+          {search ? "No quests found." : "No quests available."}
+</p>
         </div>
       ) : (
-        <div className="space-y-4">
-          {DIFFICULTY_ORDER.map((diff) => {
-            const group = grouped[diff];
-            if (group.length === 0) return null;
-            const meta       = DIFFICULTY_META[diff];
-            const isCollapsed = collapsed[diff];
-            const grpDone    = group.filter((q) => state[q.id]).length;
 
             return (
               <div key={diff} className="animate-fade-up">
