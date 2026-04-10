@@ -20,6 +20,7 @@ const worlds: WorldCard[] = [
   { id: "finance", name: "Finance World", emoji: "💰", description: "Master your money, build your wealth.", active: true, path: "/worlds/finance" },
   { id: "outdoor", name: "Outdoor World", emoji: "🌳", description: "Step outside, breathe fresh air, and reconnect with nature.", active: true, path: "/worlds/outdoor" },
   { id: "health", name: "Health & Nutrition World", emoji: "🥗", description: "Build small daily habits for a healthier diet.", active: true, path: "/worlds/health" },
+  { id: "fun", name: "Fun & Play World", emoji: "🎉", description: "Relax, enjoy, and have fun while staying active.", active: true, path: "/worlds/fun" },
 ];
 
 const triggerConfetti = () => {
