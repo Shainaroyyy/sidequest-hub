@@ -5,8 +5,6 @@ import { studyQuests } from "@/data/studyQuests";
 import { socialQuests } from "@/data/socialQuests";
 import { creativeQuests } from "@/data/creativeQuests";
 
-interface QuestWithWorld {
-  id: string;
   title: string;
   world: string;
   emoji: string;
@@ -18,6 +16,7 @@ const allQuests: QuestWithWorld[] = [
   ...studyQuests.map((q) => ({ ...q, world: "Study World", emoji: "📚", worldId: "study" })),
   ...socialQuests.map((q) => ({ ...q, world: "Social World", emoji: "🤝", worldId: "social" })),
   ...creativeQuests.map((q) => ({ ...q, world: "Creative World", emoji: "🎨", worldId: "creative" })),
+
 ];
 
 const RandomQuest = () => {
@@ -85,9 +84,7 @@ const RandomQuest = () => {
         >
           {quest ? (
             <>
-              <div className="flex items-center gap-2 text-xs font-mono text-muted-foreground">
-                <span>{quest.emoji}</span>
-                <span>{quest.world}</span>
+
               </div>
               <p className="text-xl font-heading font-semibold text-foreground leading-snug">
                 {quest.title}
