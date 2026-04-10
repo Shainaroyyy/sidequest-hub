@@ -16,6 +16,9 @@ const worlds: WorldCard[] = [
   { id: "study", name: "Study World", emoji: "📚", description: "Learn something new every day.", active: true, path: "/worlds/study" },
   { id: "social", name: "Social World", emoji: "🤝", description: "Build connections, grow your network.", active: true, path: "/worlds/social" },
   { id: "creative", name: "Creative World", emoji: "🎨", description: "Express yourself through creation.", active: true, path: "/worlds/creative" },
+  { id: "outdoor", name: "Outdoor World", emoji: "🌿", description: "Explore and connect with nature.", active: true, path: "/worlds/outdoor" },
+  { id: "health", name: "Health World", emoji: "🧠", description: "Improve your mental and physical wellbeing.", active: true, path: "/worlds/health" },
+  { id: "fun", name: "Fun World", emoji: "🎮", description: "Relax, play, and enjoy life.", active: true, path: "/worlds/fun" },
 
 ];
 
