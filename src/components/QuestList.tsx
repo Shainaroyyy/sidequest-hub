@@ -239,7 +239,7 @@ const QuestList = ({ worldId, worldEmoji, quests }: QuestListProps) => {
                           <span
                             className={`ml-auto text-[10px] font-mono uppercase tracking-wider transition-colors duration-200 ${
                               done ? "text-accent" : "text-muted-foreground opacity-0 group-hover/item:opacity-100"
-                            }`}
+                            })}
                           >
                             {done ? "done" : "pending"}
                           </span>
