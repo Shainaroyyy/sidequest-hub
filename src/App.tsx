@@ -13,6 +13,8 @@ import QuickStart from "./pages/QuickStart";
 import RandomQuest from "./pages/RandomQuest";
 import About from "./pages/About";
 import MindfulnessWorld from "@/pages/MindfulnessWorld";
+import OutdoorWorld from "@/pages/OutdoorWorld";
+
 
 
 const queryClient = new QueryClient();
@@ -33,6 +35,7 @@ const App = () => (
         <Route path="/random" element={<RandomQuest />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/worlds/outdoor" element={<OutdoorWorld />} />
       </Routes>
     </BrowserRouter>
   </QueryClientProvider>
