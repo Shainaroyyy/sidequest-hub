@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Index from "./pages/Index";
 import Worlds from "./pages/Worlds";
 import FitnessWorld from "./pages/FitnessWorld";
+import FinanceWorld from "./pages/FinanceWorld";
 import StudyWorld from "./pages/StudyWorld";
 import NotFound from "./pages/NotFound";
 import SocialWorld from "./pages/SocialWorld";
@@ -25,6 +26,7 @@ const App = () => (
         <Route path="/worlds/study" element={<StudyWorld />} />
         <Route path="/worlds/social" element={<SocialWorld />} />
         <Route path="/worlds/creative" element={<CreativeWorld />} />
+        <Route path="/worlds/finance" element={<FinanceWorld />} />
         <Route path="/random" element={<RandomQuest />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />

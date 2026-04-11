@@ -16,6 +16,9 @@ const worlds: WorldCard[] = [
   { id: "study", name: "Study World", emoji: "📚", description: "Learn something new every day.", active: true, path: "/worlds/study" },
   { id: "social", name: "Social World", emoji: "🤝", description: "Build connections, grow your network.", active: true, path: "/worlds/social" },
   { id: "creative", name: "Creative World", emoji: "🎨", description: "Express yourself through creation.", active: true, path: "/worlds/creative" },
+  {
+    id: "finance", name: "Finance World", emoji: "💰", description: "Build smart money habits.", active: true, path: "/worlds/finance",
+  },
 ];
 
 const triggerConfetti = () => {
@@ -72,7 +75,7 @@ const Worlds = () => {
       navigate(world.path!);
     }, 150);
   };
-
+  
   return (
     <div className="fixed inset-0 flex flex-col grid-bg">
       {/* Header */}
@@ -134,7 +137,7 @@ const Worlds = () => {
             return (
               <div
                 key={world.id}
-                className={`animate-fade-up animate-fade-up-delay-${i + 1} relative group ${
+                className={`animate-fade-up relative group ${
                   world.active ? "cursor-pointer" : "cursor-not-allowed"
                 } p-5 flex flex-col gap-3 border transition-all duration-300 ease-in-out
                 hover:scale-[1.03] hover:-translate-y-2 ${
@@ -211,6 +214,8 @@ const Worlds = () => {
           })}
 
           {/* Add world */}
+
+          
           <div
             className="add-world-card border-2 border-dashed border-border p-5 flex flex-col items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary)/0.15)] bg-card group animate-fade-up"
             onClick={() =>
